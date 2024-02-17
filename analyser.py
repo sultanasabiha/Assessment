@@ -39,15 +39,14 @@ for line in log:
 
 max=0
 min=float('inf')
-most=""
-least=""
+
 for key in users:
     if max<len(users[key]):
         max=len(users[key])
-        most=key
+
     if min>len(users[key]):
         min=len(users[key])
-        least=key
+
 
 sum=open("logSummary.txt","w")
 
@@ -65,10 +64,14 @@ sum.write("\n\n---  USER ACTIVITY SUMMARY  ---\n\n")
 for key in users:
     s="\n"+key+" -- "+str(users[key])+"\n"
     sum.write(s)
-s="\nMOST ACTIVE "+most+" with "+str(max)+" activities" +"\n"  
-sum.write(s)
-s="\nLEAST ACTIVE "+least+" with "+str(min)+" activities" +"\n" 
-sum.write(s)
+
+for key in users:
+    if max==len(users[key]):
+        s="\nMOST ACTIVE "+key+" with "+str(max)+" activities" +"\n"  
+        sum.write(s)
+    if min==len(users[key]):
+        s="\nLEAST ACTIVE "+key+" with "+str(min)+" activities" +"\n" 
+        sum.write(s)
 
 sum.close()
 log.close()
