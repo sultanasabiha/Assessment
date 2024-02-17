@@ -28,4 +28,6 @@ User 'Charlie' -- [' logged in.', ' performed action A.', ' performed action B.'
 
 MOST ACTIVE User 'Alice' with 14 activities
 
+MOST ACTIVE User 'Bob' with 14 activities
+
 LEAST ACTIVE User 'Charlie' with 13 activities
