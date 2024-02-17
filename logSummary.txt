@@ -1,0 +1,31 @@
+
+---  UNIQUE ERROR MESSAGES AND THEIR OCCURRENCES  ---
+
+ERROR: Database connection error. -- 4
+ERROR: File not found: 'document.txt'. -- 2
+ERROR: File not found: 'report.pdf'. -- 2
+ERROR: Unexpected server shutdown. -- 2
+ERROR: Invalid input detected. -- 1
+
+
+---  TIMESTAMPS OF THE ANOMALIES  ---
+
+ERROR: Database connection error. -- ['2024-01-19 10:10:30 ', '2024-01-19 11:05:18 ', '2024-01-19 12:20:02 ', '2024-01-19 14:05:18 ']
+ERROR: File not found: 'document.txt'. -- ['2024-01-19 10:25:28 ', '2024-01-19 13:00:02 ']
+ERROR: File not found: 'report.pdf'. -- ['2024-01-19 11:35:55 ', '2024-01-19 14:25:28 ']
+ERROR: Unexpected server shutdown. -- ['2024-01-19 12:05:18 ', '2024-01-19 15:00:02 ']
+ERROR: Invalid input detected. -- ['2024-01-19 13:35:55 ']
+
+
+---  USER ACTIVITY SUMMARY  ---
+
+
+User 'Alice' -- [' logged in.', ' performed action B.', ' performed action C.', ' logged out.', ' logged in.', ' performed action D.', ' performed action A.', ' logged out.', ' logged in.', ' performed action B.', ' performed action C.', ' logged out.', ' logged in.', ' performed action D.']
+
+User 'Bob' -- [' performed action A.', ' logged in.', ' performed action C.', ' performed action D.', ' logged out.', ' logged in.', ' performed action C.', ' performed action D.', ' performed action C.', ' logged out.', ' logged in.', ' performed action D.', ' performed action C.', ' logged out.']
+
+User 'Charlie' -- [' logged in.', ' performed action A.', ' performed action B.', ' performed action C.', ' logged out.', ' performed action B.', ' performed action A.', ' logged out.', ' logged in.', ' performed action B.', ' performed action A.', ' performed action C.', ' logged out.']
+
+MOST ACTIVE User 'Alice' with 14 activities
+
+LEAST ACTIVE User 'Charlie' with 13 activities
